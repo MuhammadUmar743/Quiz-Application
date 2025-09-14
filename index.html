@@ -1,0 +1,47 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quiz Store — Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card" role="application" aria-labelledby="quiz-title">
+      <h1 id="quiz-title">Quiz Store — Quick Quiz</h1>
+      <p class="lead">
+        Answer the questions. When you respond to the <strong>last question</strong>,
+        your score will be calculated and shown automatically.
+      </p>
+
+      <div id="quiz-root"></div>
+
+      <template id="question-template">
+        <div class="question-area">
+          <div class="q-left">
+            <div class="question" data-qtext></div>
+            <div class="options" data-options></div>
+            <div class="controls">
+              <button class="secondary" data-prev>Previous</button>
+              <button data-next>Next</button>
+              <div style="flex:1"></div>
+              <div class="small">
+                Question <span data-current>1</span> of <span data-total>1</span>
+              </div>
+            </div>
+          </div>
+          <div class="q-right">
+            <div class="meta">Progress</div>
+            <div class="progress" style="margin-top:8px">
+              <i data-progress style="width:0%"></i>
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
